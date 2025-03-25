@@ -36,11 +36,11 @@
     };
 
     macros {
-        macro_pw1: macro_copy {
+        macro_pw1: macro_pw1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(X) &kp Q &kp K &kp N9 &kp N1 &kp N0 &kp N7 &kp N1 &kp N5>;
-            label = "MACRO_COPY";
+            label = "MACRO_PW1";
         };
     };
 
@@ -78,11 +78,11 @@
 
         layer_2 {
             bindings = <
-&kp GRAVE  &kp F1     &kp F2     &kp F3     &kp F4     &kp F5    &kp F6           &kp F7     &kp F8    &kp F9    &kp F10    &kp F11       &kp F12
-&trans     &trans     &trans     &trans     &trans     &trans    &mmv MOVE_DOWN   &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp LS(LPAR)  &kp LS(RPAR)
-&trans     &kp LC(A)  &kp LC(S)  &kp LC(D)  &kp LC(F)  &trans    &mmv MOVE_LEFT   &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp LBRC      &kp RBRC
-&trans     &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans    &mmv MOVE_RIGHT  &trans     &trans    &trans    &trans     &kp MINUS     &kp EQUAL
-&trans     &trans     &trans     &trans     &to 1      &trans    &mkp LCLK        &to 1      &to 0     &trans    &trans     &trans
+&kp GRAVE  &kp F1     &kp F2     &kp F3     &kp F4     &kp F5    &mmv MOVE_UP     &kp F6      &kp F7    &kp F8    &kp F9     &kp F10       &kp F11
+&trans     &trans     &trans     &trans     &trans     &trans    &mmv MOVE_DOWN   &kp PG_UP   &kp HOME  &kp UP    &kp END    &kp LS(LPAR)  &kp LS(RPAR)
+&trans     &kp LC(A)  &kp LC(S)  &kp LC(D)  &kp LC(F)  &trans    &mmv MOVE_LEFT   &kp PG_DN   &kp LEFT  &kp DOWN  &kp RIGHT  &kp LBRC      &kp RBRC
+&trans     &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans    &mmv MOVE_RIGHT  &macro_pw1  &trans    &trans    &trans     &kp MINUS     &kp EQUAL
+&trans     &trans     &trans     &trans     &to 1      &trans    &mkp LCLK        &to 1       &to 0     &trans    &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
